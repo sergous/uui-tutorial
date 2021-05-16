@@ -1206,6 +1206,26 @@
   optionalDependencies:
     "@epam/uui-docs" "4.0.0"
 
+"@epam/promo@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@epam/promo/-/promo-4.0.0.tgz#f691afd003c76bd2f7e6e0af40289c7a17129702"
+  integrity sha512-WHUeQ+GsTvFQG6jVetFvCN0rU8sULgF0FIMc06BguoO2eGmjz5/3IKJ8UvqnmyK663HrCSoui3Hdf2Z9VOVBGQ==
+  dependencies:
+    "@epam/assets" "4.0.0"
+    "@epam/uui" "4.0.0"
+    "@epam/uui-components" "4.0.0"
+    "@types/classnames" "2.2.6"
+    "@types/lodash.isequal" "4.5.5"
+    "@types/lodash.sortby" "4.7.6"
+    "@types/react-custom-scrollbars" "4.0.3"
+    classnames "2.2.6"
+    lodash.isequal "4.5.0"
+    lodash.sortby "4.7.0"
+    moment "2.19.3"
+    react-custom-scrollbars "4.2.1"
+  optionalDependencies:
+    "@epam/uui-docs" "4.0.0"
+
 "@epam/uui-components@4.0.0", "@epam/uui-components@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@epam/uui-components/-/uui-components-4.0.0.tgz#6cc7b843a3c9d3fbb02fef9ce3f67e5c450ac152"

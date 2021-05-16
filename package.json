@@ -5,6 +5,7 @@
   "dependencies": {
     "@epam/assets": "^4.0.0",
     "@epam/loveship": "^4.0.0",
+    "@epam/promo": "^4.0.0",
     "@epam/uui": "^4.0.0",
     "@epam/uui-components": "^4.0.0",
     "@testing-library/jest-dom": "^5.11.4",
