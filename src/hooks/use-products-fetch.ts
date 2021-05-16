@@ -21,6 +21,6 @@ export function useProductsFetch(
         setHasError(true);
         setLoading(false);
       });
-  }, []);
+  }, [first, last]);
   return [response, loading, hasError];
 }

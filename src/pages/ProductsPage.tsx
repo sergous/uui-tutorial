@@ -1,12 +1,17 @@
-import React from "react";
-import { Panel, RichTextView } from "@epam/promo";
-import { FlexRow } from "@epam/uui-components";
+import React, { useState } from "react";
+import { Panel, RichTextView, Paginator } from "@epam/promo";
+import { FlexCell, FlexRow } from "@epam/uui-components";
 import css from "./ProductsPage.module.scss";
 import { Product } from "@epam/uui-docs";
 import { useProductsFetch } from "../hooks/use-products-fetch";
 
 export function ProductsPage() {
-  const [products, loading, hasError] = useProductsFetch();
+  const pageSize = 10;
+  const [page, onPageChange] = useState(0);
+  const [products, loading, hasError] = useProductsFetch(
+    page * pageSize,
+    (page + 1) * pageSize
+  );
 
   return (
     <>
@@ -26,6 +31,14 @@ export function ProductsPage() {
           ))
         )}
       </Panel>
+      <FlexCell width="100%" cx={css.container}>
+        <Paginator
+          size="24"
+          totalPages={products?.length || 0}
+          value={page}
+          onValueChange={onPageChange}
+        />
+      </FlexCell>
     </>
   );
 }
