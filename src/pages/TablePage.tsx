@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { DataTable, Text } from "@epam/promo";
 import { DataColumnProps, useAsyncDataSource } from "@epam/uui";
 import { Product } from "@epam/uui-docs";
-import { svc, ProductList } from "../services";
+import { svc } from "../services";
 import css from "./MainPage.module.scss";
-import { Panel, RichTextView, IconContainer } from "@epam/loveship";
-import { ReactComponent as UuiPromoImage } from "../icons/uui-promo-image.svg";
+import { Panel } from "@epam/loveship";
 
 export function TablePage() {
   const [value, onValueChange] = useState({});

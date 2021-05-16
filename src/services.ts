@@ -1,5 +1,5 @@
 import * as products from "./data/products.json";
-import * as searchResults from "./data/search.json";
+import * as allResults from "./data/search.json";
 import { Product } from "@epam/uui-docs";
 
 export interface ProductList {
@@ -7,6 +7,7 @@ export interface ProductList {
 }
 
 export interface SearchResult {
+  id: number;
   name: string;
   url: string;
   text: string;
@@ -14,6 +15,19 @@ export interface SearchResult {
 
 export const svc = {
   getProductItems: () => Promise.resolve(products.items as Product[]),
-  searchResults: searchResults.items,
-  // getSearchResults: () => Promise.resolve(searchResults),
+  getFirstResults: () => allResults.items,
+  getSearchResults: (searchQuery: string) => {
+    const searchResults: SearchResult[] = searchQuery.length
+      ? allResults.items.filter(
+          (r: SearchResult) =>
+            compareText(r.name, searchQuery) || compareText(r.text, searchQuery)
+        )
+      : allResults.items;
+
+    return Promise.resolve(searchResults);
+  },
 } as any;
+
+function compareText(source: string, query: string) {
+  return source.toLowerCase().includes(query.toLowerCase().trim());
+}
