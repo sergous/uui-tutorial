@@ -8,6 +8,7 @@ export const AppHeader = () => {
     <MainMenu appLogoUrl={logo}>
       {menuItems.map(({ path, name }) => (
         <MainMenuButton
+          key={name}
           caption={name}
           link={{ pathname: path }}
           priority={1}

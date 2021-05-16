@@ -1,5 +1,5 @@
 import React from "react";
-import { MainPage, TablePage, menuItems } from "./pages";
+import { menuItems } from "./pages";
 import { Route } from "react-router-dom";
 import { AppHeader } from "./AppHeader";
 import css from "./App.module.scss";
