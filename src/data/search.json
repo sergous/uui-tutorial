@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "name": "First Result One",
+      "url": "http://result1.com",
+      "text": "Lorem ipsum text Lorem ipsum text Lorem ipsum text"
+    },
+    {
+      "name": "Second Result Two",
+      "url": "http://result2.com",
+      "text": "Lorem ipsum text Lorem ipsum text Lorem ipsum text"
+    }
+  ]
+}
